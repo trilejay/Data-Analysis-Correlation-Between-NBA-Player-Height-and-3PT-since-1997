@@ -22,7 +22,8 @@ The visual analysis shows a significant decrease in the correlation between NBA 
 Loss of data during cleaning and transformation process, as well as the validity of data that was scraped may lead to inaccuracies in the result.
 
 ![Figure_1](https://github.com/user-attachments/assets/345b45ee-4e3a-438c-abf7-5ea66dbc693b)
-[NBA Player Height and 3-PT% Correlation, Per Season.pdf](https://github.com/user-attachments/files/18157797/NBA.Player.Height.and.3-PT.Correlation.Per.Season.pdf)
+<img width="1163" alt="Figure_2" src="https://github.com/user-attachments/assets/64121ef6-2328-4a35-a29d-c7e6d8f0dd55" />
+
 
 
 
