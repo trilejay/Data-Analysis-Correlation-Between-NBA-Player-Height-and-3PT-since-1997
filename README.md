@@ -18,6 +18,12 @@ Matplotlib: Data visualization
 Power BI: Data visualization
 
 # Results
-The analysis results show a significant decrease in the correlation between NBA player height and 3-point field goal percentage, over the seasons.
-Loss of data during cleaning and transformation process, as well as the validity of data scrapes may lead to inaccuracies in the result.
+The visual analysis shows a significant decrease in the correlation between NBA player height and 3-point field goal percentage, over the seasons.
+Loss of data during cleaning and transformation process, as well as the validity of data that was scraped may lead to inaccuracies in the result.
+
+![Figure_1](https://github.com/user-attachments/assets/345b45ee-4e3a-438c-abf7-5ea66dbc693b)
+[NBA Player Height and 3-PT% Correlation, Per Season.pdf](https://github.com/user-attachments/files/18157797/NBA.Player.Height.and.3-PT.Correlation.Per.Season.pdf)
+
+
+
 
