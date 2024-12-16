@@ -12,8 +12,11 @@ path2 = kagglehub.dataset_download("sumitrodatta/nba-aba-baa-stats")
 print("Path to dataset file 1:", path1)
 print("Path to dataset file 2:", path2)
 
-#returns dataframe wth player_name and player_height columns
+
 def extract_heights(file_to_process): 
+    '''
+    Returns a dataframe with player_name and player_height columns
+    '''
     # convert .csv file to pandas dataframe
     dataframe = pd.read_csv(file_to_process) 
 
@@ -23,8 +26,10 @@ def extract_heights(file_to_process):
     # print(player_heights)
     return player_heights
 
-# extract 3pt% and 3pa from players in file
 def extract_3(file_to_process):
+    '''
+    Extracts 3pt% and 3pa from players in file
+    '''
     dataframe = pd.read_csv(file_to_process)
     percentages = dataframe[['Player', 'Pos', '3P%', '3PA', 'Season']]
 
@@ -37,6 +42,9 @@ def extract_3(file_to_process):
 
 
 def load_data(target_file, data):
+    '''
+    Loads dataframe into csv file
+    '''
     data.to_csv(target_file)
 
 # create dataframes
@@ -55,19 +63,19 @@ filtered_df = merged_df[(merged_df['3PA'] > 0.1) & (merged_df['3P%'] < 1.0)]
 # correlation_per_year = filtered_df.groupby('Year').apply(lambda group: group[['player_height', '3P%']].corr().iloc[0, 1])
 # correlation_per_year.to_excel("correlation.xlsx")
 
-# calculates correlation coefficient of dataframe
 def calculate_correlation(dataframe):
+    '''
+    calculates correlation coefficient of dataframe
+    '''
     
     correlation_data = []
 
-    # Group by each season, then calculate correlation coefficient 
+    # group by each season, then calculate correlation coefficient 
     for season, group in dataframe.groupby('Season'):
         if not group['3P%'].isnull().all() and not group['player_height'].isnull().all():
             correlation = group['3P%'].corr(group['player_height'])
         else:
             correlation = None
-        
-        # append result
         correlation_data.append({'Season': season, 'Correlation': correlation})
     
     correlation_df = pd.DataFrame(correlation_data)
